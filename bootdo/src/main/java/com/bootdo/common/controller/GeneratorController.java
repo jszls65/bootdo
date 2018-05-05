@@ -70,7 +70,7 @@ public class GeneratorController {
 		Configuration conf = GenUtils.getConfig();
 		Map<String, Object> property = new HashMap<>(16);
 		property.put("author", conf.getProperty("author"));
-		property.put("email", conf.getProperty("email"));
+		//property.put("email", conf.getProperty("email"));
 		property.put("package", conf.getProperty("package"));
 		property.put("autoRemovePre", conf.getProperty("autoRemovePre"));
 		property.put("tablePrefix", conf.getProperty("tablePrefix"));

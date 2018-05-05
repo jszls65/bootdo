@@ -225,9 +225,9 @@ public class UserController extends BaseController {
 	@PostMapping("/uploadImg")
 	R uploadImg(@RequestParam("avatar_file") MultipartFile file, String avatar_data, HttpServletRequest request) {
 		if ("test".equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许修改");
 		}
-		Map<String, Object> result = new HashMap<>();
+		Map<String, Object> result = null;
 		try {
 			result = userService.updatePersonalImg(file, avatar_data, getUserId());
 		} catch (Exception e) {

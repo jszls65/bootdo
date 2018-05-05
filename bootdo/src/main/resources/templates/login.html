@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8">
@@ -8,6 +8,10 @@
     <title>BootDo</title>
     <meta name="keywords" content="BootDo管理系统">
     <meta name="description" content="BootDo管理系统">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+    <meta http-equiv="expires" content="-1">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome.css?v=4.4.0" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
@@ -92,7 +96,6 @@
         </div>
     </div>
 </div>
-<script th:inline="javascript"> var ctx = [[@{/}]] ; </script>
 <!-- 全局js -->
 <script src="/js/jquery.min.js?v=2.1.4" th:src="@{/js/jquery.min.js?v=2.1.4}"></script>
 <script src="/js/bootstrap.min.js?v=3.3.6" th:src="@{/js/bootstrap.min.js?v=3.3.6}"></script>
@@ -120,7 +123,7 @@
     function login() {
         $.ajax({
             type: "POST",
-            url: ctx+"login",
+            url: "/login",
             data: $('#signupForm').serialize(),
             success: function (r) {
                  if (r.code == 0) {

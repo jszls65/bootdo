@@ -1,5 +1,6 @@
 package com.bootdo.system.controller;
 
+import com.bootdo.common.annotation.Log;
 import com.bootdo.common.config.Constant;
 import com.bootdo.common.controller.BaseController;
 import com.bootdo.common.domain.Tree;
@@ -38,6 +39,7 @@ public class DeptController extends BaseController {
 		return prefix + "/dept";
 	}
 
+	@Log("获取部门列表")
 	@ApiOperation(value="获取部门列表", notes="")
 	@ResponseBody
 	@GetMapping("/list")

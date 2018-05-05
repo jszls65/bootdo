@@ -189,6 +189,7 @@ layui.define(['layer', 'form'], function(exports){
   
   //快捷键处理
   ,hotkey = function(iframeWin, iframe, textArea, set){
+    debugger;
     var iframeDOM = iframeWin.document, body = $(iframeDOM.body);
     body.on('keydown', function(e){
       var keycode = e.keyCode;

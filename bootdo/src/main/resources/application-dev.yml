@@ -1,5 +1,5 @@
 bootdo:
-  uploadPath: D:/var/uploaded_files/
+  uploadPath: C:/Work-hr/CMS/bootdo/uploaded_files/
 logging:
   level:
     root: info
@@ -10,7 +10,7 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/bootdo?useUnicode=true&characterEncoding=utf8
     username: root
-    password: root
+    password: 123456
     initialSize: 1
     minIdle: 3
     maxActive: 20
@@ -48,3 +48,4 @@ spring:
         max-active: 100
         # 连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1
+      database: 2
